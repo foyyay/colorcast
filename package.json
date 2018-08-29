@@ -1,7 +1,7 @@
 {
   "name": "colorcast",
-  "version": "1.0.2",
-  "description": "Produce universal library with webpack and es6",
+  "version": "1.0.0",
+  "description": "Get tints and shades based on configuation data and a color hue.",
   "main": "lib/colorcast.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build && npm run test",
@@ -21,7 +21,7 @@
     "umd",
     "commonjs"
   ],
-  "author": "Trevor Dorsey",
+  "author": "Trevor Dorsey <tsdorsey@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/foyyay/colorcast/issues"
