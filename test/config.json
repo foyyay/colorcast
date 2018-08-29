@@ -1,0 +1,10 @@
+{
+  "0": {
+    "highlight": { "saturation": 75, "value": 85 },
+    "darker": { "saturation": 80, "value": 70 }
+  },
+  "20": {
+    "highlight": { "saturation": 80, "value": 90 },
+    "darker": { "saturation": 85, "value": 75 }
+  }
+}
