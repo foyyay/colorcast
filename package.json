@@ -1,7 +1,7 @@
 {
   "name": "colorcast",
   "version": "1.0.0",
-  "description": "Get tints and shades based on configuation data and a color hue.",
+  "description": "Get tints and shades based on configuration data and a color hue.",
   "main": "lib/colorcast.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build && npm run test",
