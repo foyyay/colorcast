@@ -1,6 +1,6 @@
 {
   "name": "@foyyay/colorcast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get tints and shades based on configuration data and a color hue.",
   "main": "lib/colorcast.js",
   "scripts": {
