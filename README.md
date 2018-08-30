@@ -5,7 +5,7 @@ Given a configuration of hue points to named saturation and value entries you ca
 Install
 
 ```
-npm i @foyyay/colorcast;
+npm i colorcast;
 ```
 
 Import
