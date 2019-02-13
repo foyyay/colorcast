@@ -3,11 +3,13 @@
   "version": "1.1.0",
   "description": "Get tints and shades based on configuration data and a color hue.",
   "main": "lib/colorcast.js",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
-    "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --require babel-register --colors ./test/*.spec.js",
-    "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"
+    "build": "webpack --env dev && webpack --env build",
+    "prepublishOnly": "yarn build",
+    "test": "yarn build && mocha --require babel-register --colors ./test/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,9 @@
     "url": "https://github.com/foyyay/colorcast/issues"
   },
   "homepage": "https://github.com/foyyay/colorcast",
+  "dependencies": {
+    "color": "3.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.51",
     "@babel/core": "^7.0.0-beta.51",
@@ -37,7 +42,6 @@
     "babel-preset-env": "^7.0.0-beta.3",
     "babel-register": "^7.0.0-beta.3",
     "chai": "^4.1.2",
-    "color": "3.0.0",
     "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",
     "jsdom": "12.0.0",
