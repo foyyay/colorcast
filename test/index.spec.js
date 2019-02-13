@@ -1,4 +1,4 @@
-/* global describe, it, before */
+/* eslint-env mocha */
 
 import chai from 'chai';
 import ColorCast from '../lib/colorcast.js';
