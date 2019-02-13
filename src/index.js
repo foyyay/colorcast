@@ -21,12 +21,8 @@ class ColorCast {
 
   fromHue(hueIn) {
     let hue = ((hueIn % 360) + 360) % 360;
-    let leftHue = this._huePoints.reduce(
-      (acc, next) => (next <= hue ? next : acc)
-    );
-    let rightHue = this._huePoints.reduceRight(
-      (acc, next) => (next >= hue ? next : acc)
-    );
+    let leftHue = this._huePoints.reduce((acc, next) => (next <= hue ? next : acc));
+    let rightHue = this._huePoints.reduceRight((acc, next) => (next >= hue ? next : acc));
 
     let numerator = hue - leftHue;
     let denomiator = rightHue - leftHue;
@@ -49,8 +45,7 @@ class ColorCast {
 
       for (let component of [keySat, keyVal]) {
         settings[component] =
-          (rightSettings[component] - leftSettings[component]) * factor +
-          leftSettings[component];
+          (rightSettings[component] - leftSettings[component]) * factor + leftSettings[component];
       }
 
       let newColor = new Color();
@@ -86,9 +81,7 @@ class ColorCast {
       let hueValue = Number(hue);
 
       if (Number.isNaN(hueValue)) {
-        throw new Error(
-          `Hues must be numbers. Got ${hue} which is not a number.`
-        );
+        throw new Error(`Hues must be numbers. Got ${hue} which is not a number.`);
       }
 
       if (hueValue < 0 || hueValue >= 360) {
@@ -96,11 +89,7 @@ class ColorCast {
       }
 
       if (typeof config[hue] !== 'object') {
-        throw new Error(
-          `Hue config entries must be objects. Got ${typeof config[
-            hue
-          ]} instead.`
-        );
+        throw new Error(`Hue config entries must be objects. Got ${typeof config[hue]} instead.`);
       }
 
       let names = Object.keys(config[hue]);
@@ -109,9 +98,7 @@ class ColorCast {
       } else {
         let dif = difference(names, namedConfigs);
         if (dif.size > 0) {
-          throw new Error(
-            'Config for hue does not have consistant config names.'
-          );
+          throw new Error('Config for hue does not have consistant config names.');
         }
       }
 
