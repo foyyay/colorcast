@@ -1,6 +1,6 @@
 {
   "name": "colorcast",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Get tints and shades based on configuration data and a color hue.",
   "main": "lib/colorcast.js",
   "files": [
